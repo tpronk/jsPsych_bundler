@@ -2,17 +2,14 @@ const path = require('path');
 const fs = require('fs');
 var files = fs.readFileSync('plugins.json');
 files = JSON.parse(files);
-console.log(files);
+files = files.map(function (file) {
+  return 'plugins/' + file;
+});
 files.unshift('jspsych.js');
-
 module.exports = {
   mode: 'development',
   entry: {
-    'jspsych.bundle.js': [
-      path.resolve(__dirname, 'jspsych.js'),
-      path.resolve(__dirname, 'plugins/jspsych-html-keyboard-response.js'),
-      path.resolve(__dirname, 'plugins/jspsych-image-keyboard-response.js')
-    ]
+    'jspsych.bundle.js': files
   },
   output: {
     filename: '[name]',
