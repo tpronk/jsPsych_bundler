@@ -10,7 +10,7 @@ Clone the jsPsych repository to your hard drive, for example via the [GitHub GUI
 ## Install Node and NPM
 Node and NPM can be downloaded via [this link](https://nodejs.org/en/).
 ## Download required files from this repo
-From this repo, download **webpack.config.js** and **plugins.json**. Put these files in the directory where you cloned jsPsych.
+From this repo, download <a href="https://raw.githubusercontent.com/tpronk/jsPsych_bundler/master/plugins.json" download>plugins.json</a> and <a href="https://raw.githubusercontent.com/tpronk/jsPsych_bundler/master/webpack.config.js" download>webpack.config.js</a>. Put these files in the directory where you cloned jsPsych.
 ## Go to the jsPsych directory
 Open a command prompt and go to the directory on your hard drive where you cloned the jsPsych repository.
 ## Install webpack and webpack-cli
