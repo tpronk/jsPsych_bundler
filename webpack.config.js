@@ -3,9 +3,9 @@ const fs = require('fs');
 var files = fs.readFileSync('plugins.json');
 files = JSON.parse(files);
 files = files.map(function (file) {
-  return 'plugins/' + file;
+  return path.resolve(__dirname, 'plugins/' + file);
 });
-files.unshift('jspsych.js');
+files.unshift(path.resolve(__dirname, 'jspsych.js'));
 module.exports = {
   mode: 'development',
   entry: {
